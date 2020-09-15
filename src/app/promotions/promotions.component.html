@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2>BLOG SKULL CANDY</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <!-- Borrar -->
+    <div class="col-12" *ngFor="let promotion of promotions">
+      {{promotion}} <button class="btn btn-danger" (click)=" ButtPromotiondelete(promotion)">Borrar Promoción</button>
+    </div>
+    <!--      añadir -->
+    <div class="col-12">
+      <form (submit)="ButtPromotionadd(newPromotion)">
+        <div class="form-group row">
+          <label class="col-12 col-form-label">Ingresa una nueva promocion</label>
+          <div class="col-12">
+            <input type="text" class="form-control" #newPromotion>
+          </div>
+        </div>
+        <button class="btn btn-success">Añadir Promoción</button>
+      </form>
+    </div>
+
+    <!-- actualizar -->
+    <div class="col-12">
+      <form>
+        <div class="form-group row">
+          <div class="col-12">
+            <input type="text" class="form-control" name="street" [(ngModel)]="store.street">
+            <input type="text" class="form-control" name="city" [(ngModel)]="store.city">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-12">
+      <p>Distrito : {{store.street}}</p>
+      <p>Ciudad : {{store.city}}</p>
+    </div>
+
+    <div class="col-12" *ngFor="let post of posts">
+      <div>
+        <h2>{{post.title}}</h2>
+        <h6>{{post.userId}}</h6>
+        <p>{{post.body}}</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+.sec_2  [class*="col-4"]{
+    padding: 0;
+}
+.sec_2  [class*="row"]{
+    padding: 0;
+}
+.sec_2  [class*="col-12"]{
+    padding: 0;
+}
+
+.pircure_princ{
+   position: absolute; 
+}
+.picture{
+    opacity: 0;
+    display: block;
+   position: relative;
+}
+
+.picture:hover{
+    transition: opacity .3s ease-out .1s;
+    opacity: 1;
+    display: block;
+   position: relative;
+}
+
+h5{
+    text-transform: uppercase;
+}
+
+.sec_mv{
+    display: none
+}
+@media (max-width: 768px){
+    .sec_pc{
+        display: none  ;
+        }
+        .sec_mv{
+            display: block;
+        }
+    } 
